@@ -1,1 +1,1 @@
-# modern-nomad-site
+# modern-travelers-site
