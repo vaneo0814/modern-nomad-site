@@ -1,0 +1,41 @@
+import Head from 'next/head';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
+
+const flights = () => {
+  return (
+    <>
+      <Head>
+        <title>Flight Tickets</title>
+      </Head>
+      <div className='page-wrapper'>
+          <Header/>
+        <main>
+          <h2>Flight Ticket</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+            consequatur nemo. Numquam, iste. Ducimus, saepe. Nobis recusandae
+            eligendi iusto est sequi distinctio error eveniet, unde reiciendis,
+            voluptates cumque quas tempore.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+            consequatur nemo. Numquam, iste. Ducimus, saepe. Nobis recusandae
+            eligendi iusto est sequi distinctio error eveniet, unde reiciendis,
+            voluptates cumque quas tempore.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+            consequatur nemo. Numquam, iste. Ducimus, saepe. Nobis recusandae
+            eligendi iusto est sequi distinctio error eveniet, unde reiciendis,
+            voluptates cumque quas tempore.
+          </p>
+        </main>
+        <Footer/>
+      </div>
+    </>
+  );
+};
+
+export default flights;
