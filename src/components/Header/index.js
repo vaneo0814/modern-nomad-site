@@ -5,6 +5,10 @@ const navItems = [
     path: '/flight-tickets',
     label: 'Flight tickets',
   },
+  {
+    path: '/blog',
+    label: 'Travel Blog',
+  },
 ];
 
 const Header = () => {
