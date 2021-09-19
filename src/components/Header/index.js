@@ -11,6 +11,10 @@ const navItems = [
     path: '/blog',
     label: 'Travel Blog',
   },
+  {
+    path: '/contact-form',
+    label: 'Contact us',
+  },
 ];
 
 const Header = () => {
