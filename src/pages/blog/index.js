@@ -1,29 +1,20 @@
 import Head from 'next/head';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import { getPostList } from '../../utils/posts';
-import PostList from '../../components/PostList';
+import { getProductList } from '../../utils/products';
+import ProductList from '../../components/ProductList';
 
 
-export const getStaticProps = () => {
-    const postList = getPostList();
-    return {
-      props: {
-        postList,
-      },
-    };
-  };
-
-  const Blog = ({ postList }) => {
+const Products = ({ productList }) => {
     return (
       <>
         <Head>
-          <title>Traveling Blog // Modern Travelers</title>
+          <title>Travel tips // Modern Travelers</title>
         </Head>
         <div className='page-wrapper'>
-          <Header />
+          <Header bgImage={'/images/header.jpeg'} />
           <main>
-          <PostList posts={postList} />
+          <ProductList products={productList} />
           </main>
           <Footer />
         </div>
@@ -31,6 +22,13 @@ export const getStaticProps = () => {
     );
   };
   
-  //getStaticProps() function here
-  
-  export default Blog;
+  export default Products;
+
+  export const getStaticProps = async () => {
+    const productList = await getProductList();
+    return {
+      props: {
+        productList,
+      },
+    };
+  };

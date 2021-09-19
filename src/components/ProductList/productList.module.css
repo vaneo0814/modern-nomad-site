@@ -1,0 +1,73 @@
+.product-list {
+    margin-bottom: 48px;
+  }
+  
+  .product-list-title {
+    padding: 12px;
+    display: inline-block;
+    font-family: 'Amatic SC', cursive;
+    font-size: 3.3rem;
+  }
+  
+  .product-list-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 -16px;
+  }
+  
+  .product-item {
+    flex: 0 100%;
+    padding: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    outline: 2px solid var(--primary-400);
+    outline-offset: -6px;
+  }
+  
+  .product-image-wrapper {
+    position: relative;
+    min-height: 200px;
+    cursor: pointer;
+  }
+  
+  .product-name {
+    font-family: "Major Mono Display", monospace;
+    font-size: 1.2rem;
+  }
+
+  .product-author {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      font-style: italic;
+  }
+  
+  
+  .product-link {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    text-decoration: none;
+    margin-top: auto;
+    transition: all 0.25s ease-in-out;
+    color: white;
+    background-color: rgb(5, 17, 85);
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5rem;
+
+  }
+  
+  .product-link:hover {
+    color: black;
+    background-color: rgb(204, 126, 37);
+  }
+  
+  @media screen and (min-width: 768px) {
+    .product-item {
+      flex: 0 33.333%;
+    }
+    .product-image-wrapper {
+      min-height: 400px;
+    }
+  }

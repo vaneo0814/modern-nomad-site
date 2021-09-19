@@ -1,36 +1,27 @@
-import Head from "next/head";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import { getPostSlugs, getPostData } from "../../utils/posts";
-import SinglePost from "../../components/SinglePost";
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import { getProductSlugs, getProductData } from '../../utils/products';
+import SingleProduct from '../../components/SingleProduct';
 
-export const getStaticProps = async ({ params }) => {
-  const postData = await getPostData(params.slug);
-  return {
-    props: {
-      postData,
-    },
-  };
-};
 
-export const getStaticPaths = () => {
-  const paths = getPostSlugs();
-  return {
-    paths,
-    fallback: false,
-  };
-};
+const Product = ({ productData }) => {
+  const router = useRouter();
 
-const BlogPost = ({ postData }) => {
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
       <Head>
-        <title>{postData.postTitle} // Modern Travelers</title>
+        <title>{productData.productName} // Modern Travelers</title>
       </Head>
-      <div className="page-wrapper">
-        <Header bgImage={postData.featuredImage.url} />
+      <div className='page-wrapper'>
+        <Header bgImage={productData.productImage.url} />
         <main>
-          <SinglePost post={postData} />
+        <SingleProduct product={productData} />
         </main>
         <Footer />
       </div>
@@ -38,4 +29,29 @@ const BlogPost = ({ postData }) => {
   );
 };
 
-export default BlogPost;
+export const getStaticPaths = async () => {
+  const paths = await getProductSlugs();
+  return {
+    paths,
+    fallback: true,
+  };
+};
+
+export const getStaticProps = async ({ params }) => {
+  const productData = await getProductData(params.slug);
+
+  // throw 404
+  if (!productData) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      productData,
+    },
+  };
+};
+
+export default Product;
