@@ -6,7 +6,7 @@ import Image from 'next/image';
 const PostList = ({ posts = [] }) => {
   return (
     <section className={styles['post-list']}>
-  <h2 className={styles['post-list-title']}>what's up, blog</h2>
+  <h2 className={styles['post-list-title']}>what's up travelers!<br/>check out some travel tips from our crew</h2>
   <div className={styles['post-list-grid']}>
     {posts.length ? (
       posts.map(({ postTitle, author, featuredImage, slug }) => (

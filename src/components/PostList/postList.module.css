@@ -3,11 +3,13 @@
   }
   
   .post-list-title {
-    padding: 12px;
-    background-color: var(--primary-500);
-    color: var(--primary-100);
+    padding-bottom: 10px;
+    /* background-color: var(--primary-500); */
+    color: black;
     display: inline-block;
-  }
+    font-family: 'Amatic SC', cursive;
+    font-size: 3rem;
+}
   
   .post-list-grid {
     display: flex;
@@ -40,6 +42,8 @@
   .post-author {
     font-size: 1.2rem;
     margin: 8px 0;
+    font-family: "Major Mono Display", monospace;
+    ;
   }
   
   .post-link {
@@ -49,13 +53,15 @@
     text-decoration: none;
     margin-top: auto;
     transition: all 0.25s ease-in-out;
-    color: var(--primary-500);
+    color: white;
     background-color: var(--primary-400);
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5rem;
   }
   
   .post-link:hover {
-    color: var(--primary-100);
-    background-color: var(--primary-500);
+    color: black;
+    background-color: rgb(204, 126, 37);
   }
 
   .post-image-wrapper {
@@ -69,7 +75,7 @@
   .post-image-wrapper {
     min-width: unset;
   }
-  
+
   @media screen and (min-width: 768px) {
     .post-item {
       flex-direction: row;

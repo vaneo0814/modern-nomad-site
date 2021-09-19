@@ -2,11 +2,10 @@ import Link from 'next/link';
 import styles from './header.module.css';
 import { useRouter } from 'next/router';
 
-
 const navItems = [
   {
     path: '/',
-    label: 'Flight tickets',
+    label: 'Flights',
   },
   {
     path: '/blog',

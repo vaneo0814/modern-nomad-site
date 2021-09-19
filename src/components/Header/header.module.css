@@ -1,12 +1,11 @@
 .header {
-  min-height: 35vh;
+  min-height: 20vh;
   display: flex;
   align-items: flex-start;
-  background-color: var(--primary-500);
   background-image: url("/images/header.jpeg");
   background-size: cover;
   background-position: center;
-  background-blend-mode: color-dodge;
+  /* background-blend-mode: color-dodge; */
   background-attachment: local;
 }
 
@@ -23,17 +22,17 @@
 .header-logo {
   font-family: "Major Mono Display", monospace;
   text-decoration: none;
-  font-size: 4rem;
+  font-size: 2.5rem;
   line-height: 1;
-  letter-spacing: -8px;
-  color: var(--primary-100);
-  text-shadow: 0 0 10px var(--primary-500);
+  letter-spacing: -3px;
+  color: black;
+  /* text-shadow: 0 0 10px var(--primary-500); */
   flex: 0 100%;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .header-nav {
-  background-color: var(--primary-500);
+  background-color: rgb(20, 44, 83);
   flex: 0 100%;
   display: flex;
   flex-direction: column;
@@ -56,8 +55,8 @@
 .header-link:hover,
 .header-link:active,
 .header-link:focus {
-  color: var(--primary-500);
-  background-color: var(--primary-100);
+  color: black;
+  background-color: rgb(194, 203, 216);
 }
 
 @media screen and (min-width: 768px) {

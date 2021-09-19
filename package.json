@@ -13,6 +13,8 @@
   "author": "vaneo0814 <vorellana814@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "gray-matter": "^4.0.3",
     "next": "^11.1.2",
     "react": "^17.0.2",
