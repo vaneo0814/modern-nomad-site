@@ -6,9 +6,9 @@
 
 /* Set CSS properties to reuse color properties */
 :root {
-  --primary-100: #d2d0dbd5;
+  --primary-100: #dbdff1d5;
   --primary-200: #505886;
-  --primary-300: #6187b3;
+  --primary-300: #000000;
   --primary-400: #2a3874;
   --primary-500: #1e0b0c;
   --light: #ffffff;

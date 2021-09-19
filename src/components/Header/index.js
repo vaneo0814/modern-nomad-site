@@ -1,9 +1,11 @@
 import Link from 'next/link';
+import styles from './header.module.css';
+import { useRouter } from 'next/router';
 
 const navItems = [
   {
-    path: '/flight-tickets',
-    label: 'Flight tickets',
+    path: '/',
+    label: 'Flights',
   },
   {
     path: '/blog',
@@ -12,22 +14,31 @@ const navItems = [
 ];
 
 const Header = () => {
+    const router = useRouter(); //useRouter is ia built in component for handling links between pages
   return (
-    <header>
-      <div>
-        <Link href="/">
-          <a>Home</a>
+    <header className={styles.header}>
+    <div className={styles['header-wrapper']}>
+      <Link href="/">
+        <a className={styles['header-logo']}>Modern Travelers</a>
+      </Link>
+  
+      <nav className={styles['header-nav']}>
+        {navItems.map(({ path, label }) => (
+          <Link key={path} href={path}>
+          <a
+            className={`${styles['header-link']} ${
+              router && router.pathname.includes(path)
+                ? styles['header-link-active']
+                : ''
+            }`}
+          >
+            {label}
+          </a>
         </Link>
-
-        <nav>
-          {navItems.map(({ path, label }) => (
-            <Link key={path} href={path}>
-              <a>{label}</a>
-            </Link>
-          ))}
-        </nav>
-      </div>
-    </header>
+        ))}
+      </nav>
+    </div>
+  </header>
   );
 };
 

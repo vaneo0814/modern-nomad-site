@@ -5,12 +5,17 @@ class CustomDocument extends Document {
     return (
       <Html>
         <Head>
-            {/* this is where the google fonts is imported in  */}
+          {/* this is where the google fonts is imported in  */}
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
             rel="stylesheet"
           />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Playfair+Display&display=swap"
+            rel="stylesheet"
+          />
+          <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Playfair+Display&family=Space+Mono&display=swap" rel="stylesheet"/>
         </Head>
         <body>
           <Main />
