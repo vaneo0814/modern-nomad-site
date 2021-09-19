@@ -1,10 +1,9 @@
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { getPostList } from '../utils/posts';
 
 
-const Home = ({ postList }) => {
+const flightsHome = ({ postList }) => {
     return (
       <>
         <Head>
@@ -14,6 +13,7 @@ const Home = ({ postList }) => {
           <Header />
           <main>
             <pre>{JSON.stringify(postList, null, 2)}</pre>
+            <h1>HELLO CHRIS</h1>
           </main>
           <Footer />
         </div>
@@ -21,13 +21,4 @@ const Home = ({ postList }) => {
     );
   };
 
-export const getStaticProps = () => {
-    const postList = getPostList();
-    return {
-      props: {
-        postList,
-      },
-    };
-  };
-
-export default Home;
+export default flightsHome;
