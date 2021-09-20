@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 const navItems = [
   {
     path: '/',
-    label: 'Flights',
+    label: 'Home',
   },
   {
     path: '/blog',
