@@ -30,7 +30,7 @@ const Home = () => {
                 />
               </div>
               <h4 className={styles["product-link"]}>
-                SAFARI - Lake Manyara <br /> National Park{" "}
+                SAFARI - Lake Manyara <br /> National Park
               </h4>
             </div>
             <div className={styles["product-item"]}>
@@ -45,7 +45,7 @@ const Home = () => {
                 />
               </div>
               <h4 className={styles["product-link"]}>
-                BERMUDA - Warwick Bay Beach <br /> Warwick Parish{" "}
+                BERMUDA - Warwick Bay Beach <br /> Warwick Parish
               </h4>
             </div>
             <div className={styles["product-item"]}>
@@ -121,8 +121,7 @@ const Home = () => {
 
             <div className={styles["product-item"]}>
               <h4 className={styles["product-link-about"]}>
-                {" "}
-                - About Modern Travelers -{" "}
+                - About Modern Travelers -
               </h4>
               <p className={styles["product-link-aboutInfo"]}>
                 For more than 10 years I worked my ass off. Always trying to be
