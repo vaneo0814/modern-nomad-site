@@ -1,4 +1,4 @@
-# modern-travelers-site
+# Modern Travelers
 
 ### By Vanessa Orellana
 
