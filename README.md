@@ -2,7 +2,13 @@
 
 ### By Vanessa Orellana
 
-***Goals:***
+***Preview:***
+
+<img width="600" alt="Screen Shot 2021-09-21 at 12 47 45 AM" src="https://user-images.githubusercontent.com/67250231/134113124-1e05d433-8984-473b-8400-c0194825002c.png">
+
+<img width="600" alt="Screen Shot 2021-09-21 at 12 48 09 AM" src="https://user-images.githubusercontent.com/67250231/134113128-cd5120f0-018b-433d-870b-9b8ad7e44b59.png">
+
+<img width="600" alt="Screen Shot 2021-09-21 at 12 48 17 AM" src="https://user-images.githubusercontent.com/67250231/134113132-569719d0-27f0-4338-a1f9-0c14ea2ce21d.png">
 
 Requirements:
 
