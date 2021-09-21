@@ -112,7 +112,9 @@ const Home = () => {
               </div>
               <div className={styles["product-item"]}>
                 <Link href={`/blog`}>
-                  <a className={styles["button"]}>Travel tips from our crew !</a>
+                  <a className={styles["button"]}>
+                    Travel tips from our crew !
+                  </a>
                 </Link>
               </div>
             </div>
