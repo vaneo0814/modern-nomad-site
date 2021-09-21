@@ -16,6 +16,7 @@ class CustomDocument extends Document {
             rel="stylesheet"
           />
           <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Playfair+Display&family=Space+Mono&display=swap" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet"/>
         </Head>
         <body>
           <Main />

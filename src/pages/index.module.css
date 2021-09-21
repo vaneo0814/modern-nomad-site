@@ -1,29 +1,31 @@
 .product-list {
-    margin-bottom: 48px;
+    margin-bottom: 40px;
   }
   
   .product-list-title {
-    padding: 12px;
-    display: inline-block;
-    font-family: 'Amatic SC', cursive;
-    font-size: 3.3rem;
+    padding: 20px;
+    margin-top: 50px;
+    display: block;
+    font-size: 2rem;
+    font-family: 'Shadows Into Light', cursive;
+    text-transform: uppercase;
+    text-align: center;
   }
   
   .product-list-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     margin: 0 -16px;
+    flex-direction: row;
   }
   
   .product-item {
     flex: 0 100%;
-    padding: 16px;
-    margin-bottom: 12px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    outline: 2px solid var(--primary-400);
-    outline-offset: -6px;
+    
   }
   
   .product-image-wrapper {
@@ -32,18 +34,6 @@
     cursor: pointer;
   }
   
-  .product-name {
-    font-family: "Major Mono Display", monospace;
-    font-size: 1.2rem;
-  }
-
-  .product-author {
-      font-size: 1rem;
-      margin-bottom: 10px;
-      font-style: italic;
-  }
-  
-  
   .product-link {
     display: inline-block;
     width: 100%;
@@ -51,11 +41,8 @@
     text-decoration: none;
     margin-top: auto;
     transition: all 0.25s ease-in-out;
-    color: white;
-    background-color: rgb(5, 17, 85);
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Shadows Into Light', cursive;
     font-size: 1.5rem;
-
   }
   
   .product-link:hover {
@@ -70,4 +57,47 @@
     .product-image-wrapper {
       min-height: 400px;
     }
+  }
+
+  .product-link-about {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    text-decoration: none;
+    margin-top: auto;
+    transition: all 0.25s ease-in-out;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2rem;
+  }
+
+  .product-link-aboutInfo{
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    text-decoration: none;
+    margin-top: auto;
+    transition: all 0.25s ease-in-out;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.2rem;
+  }
+
+  .button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(204, 126, 37);
+    color: white;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.5rem;
+    border-style: none;
+    padding: 20px;
+    border-radius: 1ch;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .button:hover {
+    background-color: rgb(11, 35, 99);
+    color: white;
+    transition: all 0.25s ease-in-out;
   }
