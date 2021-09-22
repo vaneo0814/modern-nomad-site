@@ -45,6 +45,7 @@ const ProductForm = ({ product }) => {
             body: `
       From: ${state.name}<br/>
       Email: ${state.email}
+      Message: ${state.message}
           `,
           }),
         })

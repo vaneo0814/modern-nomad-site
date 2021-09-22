@@ -10,7 +10,7 @@ const ProductList = ({ products = [] }) => {
           {products.length ? (
             products.map(({ id, productName, productAuthor, productImage, slug }) => (
               <div key={id} className={styles['product-item']}>
-                <Link href={`/products/${slug}`}>
+                <Link href={`/blog/${slug}`}>
                   <div className={styles['product-image-wrapper']}>
                     <Image
                       className={styles['product-image']}
