@@ -1,26 +1,28 @@
-import { useReducer } from 'react';
-import styles from './productForm.module.css';
+import { useReducer } from "react";
+import styles from "./productForm.module.css";
 
 const ProductForm = ({ product }) => {
   const initState = {
-    name: '',
-    email: '',
-    subject: '',
-    body: '',
-    status: 'IDLE',
+    name: "",
+    email: "",
+    body: "",
+    message: "",
+    status: "IDLE",
   };
 
   const reducer = (state, action) => {
     switch (action.type) {
-      case 'name':
+      case "name":
         return { ...state, name: action.payload };
-      case 'email':
+      case "email":
         return { ...state, email: action.payload };
-      case 'body':
+      case "message":
+        return { ...state, message: action.payload };
+      case "body":
         return { ...state, body: action.payload };
-      case 'updateStatus':
+      case "updateStatus":
         return { ...state, status: action.payload };
-      case 'reset':
+      case "reset":
       default:
         return initState;
     }
@@ -29,91 +31,91 @@ const ProductForm = ({ product }) => {
   const [state, dispatch] = useReducer(reducer, initState);
 
   const setStatus = (status) =>
-    dispatch({ type: 'updateStatus', payload: status });
+    dispatch({ type: "updateStatus", payload: status });
 
   const updateFieldValue = (fieldName) => (event) =>
     dispatch({ type: fieldName, payload: event.target.value });
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        setStatus('SENDING');
-      
-        fetch('/api/product-inquiry', {
-          method: 'POST',
-          body: JSON.stringify({
-            ...state,
-            body: `
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setStatus("SENDING");
+
+    fetch("/api/product-inquiry", {
+      method: "POST",
+      body: JSON.stringify({
+        ...state,
+        body: `
       From: ${state.name}<br/>
       Email: ${state.email}
       Message: ${state.message}
           `,
-          }),
-        })
-          .then((response) => response.json())
-          .then((response) => {
-            if (!response.ok) {
-              throw response;
-            }
-            setStatus('SENT');
-          })
-          .catch((err) => {
-            console.log(err);
-            setStatus('ERROR');
-          });
-      };
+      }),
+    })
+      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw response;
+        }
+        setStatus("SENT");
+      })
+      .catch((err) => {
+        console.log(err);
+        setStatus("ERROR");
+      });
+  };
 
   return (
     <div>
-      {state.status === 'SENT' ? (
+      {state.status === "SENT" ? (
         <>
           <h4>Message sent!</h4>
           <button
-            className={styles['form-btn']}
+            className={styles["form-btn"]}
             type="reset"
-            onClick={() => dispatch({ type: 'reset' })}
+            onClick={() => dispatch({ type: "reset" })}
           >
             Reset Form
           </button>
         </>
       ) : (
-        <form className={styles['form']} onSubmit={handleSubmit}>
+        <form className={styles["form"]} onSubmit={handleSubmit}>
           <h3>Questions or Concerns? Send us a message</h3>
-          <label className={styles['form-label']}>
+          <label className={styles["form-label"]}>
             Name
             <input
               type="text"
               value={state.name}
-              onChange={updateFieldValue('name')}
-              className={styles['form-input']}
+              onChange={updateFieldValue("name")}
+              className={styles["form-input"]}
             />
           </label>
-          <label className={styles['form-label']}>
+          <label className={styles["form-label"]}>
             Email
             <input
               type="email"
               value={state.email}
-              onChange={updateFieldValue('email')}
-              className={styles['form-input']}
+              onChange={updateFieldValue("email")}
+              className={styles["form-input"]}
             />
           </label>
-          <label className={styles['form-label']}>
+          <label className={styles["form-label"]}>
             Message
             <textarea
               type="text"
               value={state.message}
-              onChange={updateFieldValue('message')}
-              className={styles['message-input']}
+              onChange={updateFieldValue("message")}
+              className={styles["message-input"]}
               required
             />
           </label>
 
           <button
-            className={styles['form-btn']}
-            disabled={state.status === 'SENDING'}
+            className={styles["form-btn"]}
+            disabled={state.status === "SENDING"}
           >
-            {state.status !== 'SENDING' ? 'Send' : 'Sending...'}
+            {state.status !== "SENDING" ? "Send" : "Sending..."}
           </button>
-          {state.status === 'ERROR' && <div>ERROR!</div>}
+          {state.status === "ERROR" && <div>ERROR!</div>}
         </form>
       )}
     </div>
